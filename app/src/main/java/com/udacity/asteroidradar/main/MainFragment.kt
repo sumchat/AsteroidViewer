@@ -53,7 +53,7 @@ class MainFragment : Fragment() {
             it?.let { dailyPicture ->
                 Timber.i("Observer of dailyPictureData: ${dailyPicture.url}")
                 Picasso.get().load(dailyPicture.url).into(binding.activityMainImageOfTheDay)
-               // binding.activityMainImageOfTheDay.contentDescription = dailyPicture.title
+               binding.activityMainImageOfTheDay.contentDescription = dailyPicture.title
                 binding.textView.text = dailyPicture.title
 
             }
